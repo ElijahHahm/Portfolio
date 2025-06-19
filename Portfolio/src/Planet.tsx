@@ -24,11 +24,21 @@ const PLANET_TEXTURES: Record<string, string[]> = {
     'Bump 4k', 'Clouds 4k', 'Diffuse 2 4k', 'Diffuse 4k', 'Elevation 4k',
     'Lights Metropolis 2 4k', 'Lights Metropolis 4k', 'Roughness 4k'
   ],
+  'Exotic 03': [
+    'Bump 4k', 'Clouds 4k', 'Diffuse 4k', 'Elevation 4k', 'Land Mask 4k',
+    'Lights Metropolis 4k', 'Lights Rural 4k', 'Lights Urban 4k', 'Roughness 4k'
+  ],
+  'Gaseous 01': [
+    'Bump 4k', 'Diffuse 4k', 'Metallic 4k'
+  ],
   'Gaseous 03': [
     'Bump 4k', 'Diffuse 4k', 'Metallic 4k'
   ],
   'Ice 05': [
     'Bump 4k', 'Clouds 4k', 'Diffuse 4k', 'Elevation 4k', 'Lights Rural 4k', 'Lights Urban 4k', 'Roughness 4k'
+  ],
+  'Ice 06': [
+    'Bump 4k', 'Clouds 4k', 'Diffuse 4k', 'Elevation 4k', 'Land 4k', 'Lights Rural 4k', 'Lights Urban 4k', 'Roughness 4k'
   ],
   'Korriban': [
     'Bump 4k', 'Clouds 4k', 'Diffuse 4k', 'Elevation 4k', 'Roughness 4k'
@@ -90,7 +100,7 @@ export default function Planet({ position, texturePath, size = 1 }: PlanetProps)
   }, [texturePath])
 
   useFrame(() => {
-    if (meshRef.current) meshRef.current.rotation.y += 0.002
+    if (meshRef.current) meshRef.current.rotation.y += 0.001
   })
 
   return (
